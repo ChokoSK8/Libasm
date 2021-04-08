@@ -6,7 +6,7 @@
 /*   By: abrun <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 10:41:17 by abrun             #+#    #+#             */
-/*   Updated: 2021/04/07 16:11:25 by abrun            ###   ########.fr       */
+/*   Updated: 2021/04/08 12:10:03 by abrun            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,5 @@
 
 int		main(int ac, char **av)
 {
-	char	*s = "Hey cava ?";
-	char	*dest = ft_strdup(s);
-	printf("Dest : %s\n", dest);
+	printf("Res : %d\n", ft_atoi_base("34e", "0123456789abcdef"));
 }

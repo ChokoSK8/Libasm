@@ -1,0 +1,31 @@
+			global	ft_atoi_base
+
+			extern	ft_power
+			extern	get_index
+			extern	ft_strlen
+
+			section	.text
+
+ft_atoi_base:
+		call	ft_strlen
+		mov		r9, rax
+		dec		r9
+		mov		r10, rdi
+		mov		rdi, rsi
+		call	ft_strlen
+		mov		rdi, r10
+		mov		r8, rax
+		mov		rsi, rdi
+		pop		rdi
+		mov		bl, BYTE [rdi]
+		inc		rdi
+		push	rdi
+		movzx	rdi, bl
+		call	get_index
+		mov		r10, rax
+		mov		rdi, r8
+		push	rsi
+		mov		rsi, r9
+		call	ft_power
+		mul		r10
+		ret
